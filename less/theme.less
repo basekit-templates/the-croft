@@ -1,0 +1,395 @@
+// -------------------------------------
+// Acoustic Template: LESS > Theme
+// -------------------------------------
+
+
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+//  #Global Breakpoints
+//  #Site Styles
+//  #Page Styles
+//  #Page Default
+//  #Header
+//  #Footer
+
+
+
+
+// ------------------------------
+// #Global Breakpoints
+// ------------------------------
+
+// Page is contained and centered
+@bp-global-above-fullwidth: ~"only screen and (min-width: 1800px)";
+
+// Page displayed full width
+@bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
+
+@bp-global-large: 	~"only screen and (min-width: 1400px)";
+@bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
+@bp-global-small: 	~"only screen and (max-width: 769px)";
+@mobile: ~"only screen and (max-width: 650px)";
+
+// When specific styles for responsive columns styles are applied
+@bp-global-columns: ~"only screen and (min-width: 478px)";
+
+
+
+// ------------------------------
+// Site Styles
+// ------------------------------
+
+
+body {
+    background-color: darken(@color__body--background, 12%);
+}
+
+
+// Site Container
+.site-container {
+    width: 100%;
+    .flex-display;
+    .flex-direction(column);
+    height: 100%;
+    min-height: 100vh;
+    background-color: @color__body--background;
+
+    @media @bp-global-above-fullwidth {
+        width: 90%;
+        max-width: @value__container--width;
+        margin: 0 auto;
+    }
+    @media @mobile {
+        display: block;
+        min-height: inherit;
+    }
+}
+
+// Main
+.main-content {
+    position: relative;
+    z-index: 50;
+    background-color: @color__body--background;
+
+    @media @bp-global-large {
+        margin-top: @value__widget--spacing--desktop;
+    }
+    @media @bp-global-medium {
+        margin-top: @value__widget--spacing--laptop;
+    }
+    @media @tablet {
+        margin-top: @value__widget--spacing--tablet;
+    }
+    @media @mobile {
+        margin-top: @value__widget--spacing--mobile;
+    }
+}
+
+
+
+
+// ------------------------------
+// Page Styles
+// ------------------------------
+
+
+.page {
+    .flex(1 1 auto);
+
+    // Default Page
+    &--default .main-content,
+    &--blogpost .main-content {
+        margin-top: 0;
+
+        .widget:first-child {
+            margin-top: 60px;
+        }
+    }
+}
+
+
+// Page Title
+.pagetitle {
+    padding: 6px 70px;
+    background-color: darken(@color__body--background, 4%);
+    border-bottom: 1px solid darken(@color__body--background, 10%);
+    text-align: center;
+
+    @media @bp-global-medium {
+        padding: 6px 40px;
+    }
+    @media @bp-global-small {
+        padding: 6px 20px;
+    }
+}
+
+// Page Title Text
+.pagetitle-text {
+    padding-bottom: 0;
+    .heading--4;
+
+    @media @mobile {
+        font-size: bkscale(@font__h4--font-size, 0.7);
+        line-height: bkscale(@font__h4--line-height, 0.7);
+        text-align: center;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Page Default
+// ------------------------------
+
+.page--default {
+    .template-header {
+        background-color: @color__primary;
+        .flex-item:first-child {
+            width: 33.33%;
+            @media @mobile {
+                width: 50%;
+            }
+        }
+        .profile {
+            .button {
+                top: 0;
+                border-right: 2px solid #e6e6e6;
+                border-top: 2px solid #e6e6e6;
+                border-bottom: 2px solid #e6e6e6;
+                @media @tablet {
+                    line-height: 40px;
+                }
+            }
+            .input {
+                color: @color__body--background;
+            }
+        }
+        .company-link {
+            color: @font-swatch10-color;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// #Header
+// ------------------------------
+
+.template-header {
+    position: absolute;
+    top: 0;
+    z-index: 10002;
+    max-width: @value__container--width;
+    padding: 20px 10px 20px 20px;
+    width: 100%;
+
+    @media @bp-global-below-fullwidth {
+        width: 100%;
+    }
+    @media @bp-global-medium {
+        padding: 30px 40px;
+    }
+    @media @tablet {
+        border: 0;
+    }
+    @media @mobile {
+        order: 1;
+    }
+
+
+    // Container
+	.container {
+		.flex-display;
+		.justify-content(space-between);
+        .align-items(center);
+
+        @media @mobile {
+            display: block;
+        }
+	}
+
+    // Flex Item
+    .flex-item {
+        width: 33.333%;
+        &:last-child {
+            text-align: right;
+        }
+
+        @media @tablet {
+            width: 40%;
+            background-color: transparent;
+            border: 0;
+
+            &:first-child,
+            &:last-child {
+                @media @medium {
+                    width: 50%;
+                }
+            }
+        }
+        @media @mobile {
+            width: 100%;
+
+            &:first-child {
+                .flex-display;
+                .flex-direction(column);
+                .justify-content(center);
+                width: 80%;
+                padding: 0;
+                min-height: 43px;
+            }
+            &:last-child {
+                position: absolute;
+                top: 25px;
+                right: 0;
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+
+// Header: Additional
+// ------------------------------
+
+// For default page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
+.page--default .template-header {
+    position: relative;
+    z-index: inherit;
+    width: 100%;
+    background-color: @color__body--background;
+    min-height: auto;
+    border-bottom: 1px solid darken(@color__body--background, 10%);
+
+
+    // Flex Item
+    @media @mobile {
+        .flex-item:first-child,
+        .flex-item:last-child {
+            background-color: darken(@color__body--background, 4%);
+            border-bottom: 1px solid darken(@color__body--background, 10%);
+        }
+    }
+
+    // Profile Widget
+    .profile {
+
+        p, h2, h3,
+        .phone-number-link,
+        .company-link,
+        .social-link:before,
+        .emailaddress__email,
+        .button {
+            color: @color__companyname--text;
+        }
+
+        // Twitter
+        .tweet-content a {
+            color: @color__primary;
+        }
+
+         // Email
+        .emailaddress__email {
+            @media @tablet {
+                color: transparent;
+
+                &:before {
+                    color: @color__h2--text;
+                }
+            }
+        }
+
+        // Form
+        .input {
+            color: @color__h2--text;
+            border-color: darken(@color__body--background, 10%);
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+
+        // Button
+        .button {
+            position: relative;
+            top: 1px;
+            margin-top: 0;
+            padding: 0 10px;
+            border-left: 0;
+            border-right: 1px solid darken(@color__body--background, 10%);
+        }
+
+    }
+
+    // Comapny Link
+    .company-link {
+        color: @color__h2--text;
+    }
+
+    // Navigation Toggle Button
+    .navigation-toggle {
+        background-color: @color__navigation--text;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .open .navigation-toggle {
+        background-color: transparent;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .page--default .template-header .profile .tweet-content a {
+        color: #595959;
+    }
+}
+
+
+// ------------------------------
+// #Footer
+// ------------------------------
+
+
+.template-footer {
+    width: 100%;
+    background-color: @color__body--background;
+    border-top: 1px solid darken(@color__body--background, 10%);
+    text-align: center;
+
+    // Widget
+    .widget {
+        @media @bp-global-large {
+            padding: 40px 70px;
+        }
+        @media @bp-global-medium {
+            padding: 30px 40px;
+        }
+        @media @bp-global-small {
+            padding: 20px 20px;
+        }
+    }
+}

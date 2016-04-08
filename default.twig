@@ -1,0 +1,50 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  page--default">
+
+
+<!-- Header -->
+<header class="template-header">
+    <div class="container">
+        <div class="flex-item">
+            <div class="widget-profile-header">
+                {{widget('profile', 'header-profile1', { 'profileType':'socialicons' })|raw}}
+            </div>
+        </div>
+        <div class="flex-item">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {
+                "business": "profile",
+                "showTplWidget":"0"
+                })|raw}}
+        </div>
+        <div class="flex-item">
+                    <div class="template-navigation">
+                {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="page-title">
+        {{widget('pagetitle', 'page-title', {})|raw}}
+    </div>
+
+
+    <!-- Zone Content -->
+    <div class="main-content">
+        <div class="container">
+
+            {{zone('main')|raw}}
+
+        </div>
+    </div>
+
+
+</section>
+
+{% endblock %}
+

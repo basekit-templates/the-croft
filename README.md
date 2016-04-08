@@ -1,2 +1,3 @@
-# the-croft
-Basekit V8 Template
+# The Croft
+
+Basekit v8 Template
