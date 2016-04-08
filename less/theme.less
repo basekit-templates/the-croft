@@ -247,13 +247,37 @@ body {
             &:last-child {
                 position: absolute;
                 top: 25px;
-                right: 0;
+                right: 20px;
                 width: 50%;
             }
         }
     }
 }
 
+
+// Hiding Feature Styles
+// ----------------------------------------
+
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .profile .button {
+    top: 0px;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-logo {
+    background-color: @color-swatch3;
+    position: relative;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero {
+    height: 100%;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    background-color: @color-swatch3;
+}
 
 
 // Header: Additional
