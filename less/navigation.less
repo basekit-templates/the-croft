@@ -9,6 +9,10 @@
     background-color: @color-swatch2;
 }
 
+.widget__extendednavigation.open:after {
+    background-color: @color__feature-content--background;
+}
+
 
 // Navigation List
 // ---------------
@@ -38,7 +42,7 @@
 .navigation-item .item-name {
     padding: 5px 15px;
     &:hover {
-        color: @color__navigation--text;
+        color: @color__navigation--text--selected;
         text-decoration: underline;
     }
 }
@@ -106,8 +110,9 @@
     }
 }
 
-.navigation-list--children, .default-page .navigation-list--children {
-    background-color:@color-swatch1;
+.navigation-list--children,
+.default-page .navigation-list--children {
+    background-color: lighten(@color__feature-content--background, 10%);
     border: 1px solid darken(@color-swatch1,10%);
     z-index: 99999;
     .navigation__item-name {

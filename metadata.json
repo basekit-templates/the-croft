@@ -210,7 +210,7 @@
             "color__feature-headline--text" : "#fff",
             "font__feature-headline--letter-spacing": "2px",
             "font__feature-strapline--font-family" : "@font-swatch9-font-family",
-            "font__feature-strapline--font-size" : "12px",
+            "font__feature-strapline--font-size" : "14px",
             "font__feature-strapline--font-weight" : "400",
             "font__feature-strapline--line-height" : "24px",
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing",
