@@ -172,9 +172,9 @@
             "font__navigation--font-size": "20px",
             "font__navigation--font-weight": "700",
             "font__navigation--line-height": "26px",
-            "font__navigation--letter-spacing": "2px",
-            "color__navigation--text": "#9a9ca5",
-            "color__navigation--text--selected": "#fff"
+            "font__navigation--letter-spacing": "1px",
+            "color__navigation--text": "@color-swatch4",
+            "color__navigation--text--selected": "@color-swatch4"
         },
         "form": {
             "color__form-legend--text" : "#fff",

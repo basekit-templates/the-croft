@@ -99,7 +99,7 @@
     text-align: center;
     max-width: 100%;
     background-color: fade(@color__feature-content--background, 50%);
-    padding: 10px 0px 20px;
+    padding: 10px 0px 10px;
 
     @media @tablet {
         opacity: 1!important;
@@ -132,18 +132,10 @@
     color: @color__feature-headline--text;
     text-transform: uppercase;
 
-    @media @bp-global-medium {
-        font-size: bkscale(@font__feature-headline--font-size, 0.8);
-        line-height: bkscale(@font__feature-headline--line-height, 0.8);
-    }
-    @media @tablet {
-        font-size: bkscale(@font__feature-headline--font-size, 0.7);
-        line-height: bkscale(@font__feature-headline--line-height, 0.7);
-    }
     @media @mobile {
         margin-top: 0;
-        font-size: bkscale(@font__feature-headline--font-size, 0.7);
-        line-height: bkscale(@font__feature-headline--line-height, 0.7);
+        font-size: bkscale(@font__feature-headline--font-size, 0.9);
+        line-height: bkscale(@font__feature-headline--line-height, 0.9);
     }
 
 }

@@ -70,8 +70,15 @@
 .logo {
     text-align: center;
 }
+
 .logo {
     margin: 10px 0;
+}
+
+.logo__logo-image {
+    @media @mobile {
+        transform:scale(0.8);
+    }
 }
 
 
@@ -114,11 +121,8 @@
 // -----------------------------
 
 
-
-
 // #Dropbox
 // ------------------------------
-
 
 .dropbox__button,
 .dropbox__label {
@@ -143,8 +147,6 @@
         font-size:  bkscale(@font__button--font-size, 0.88);
     }
 }
-
-
 
 // #Click to Call
 // ------------------------------

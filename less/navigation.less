@@ -43,7 +43,6 @@
     padding: 5px 15px;
     &:hover {
         color: @color__navigation--text--selected;
-        text-decoration: underline;
     }
 }
 
@@ -51,10 +50,10 @@
     padding: 16px 20px;
 }
 
+
 // Selected Class
 .extendednavigation li.selected > a  {
-    text-decoration: underline;
-    color: @color__navigation--text;
+    color: @color__navigation--text--selected;
 }
 
 .navigation-item.folder .navigation-item--child a {
@@ -62,14 +61,30 @@
 }
 
 .extendednavigation__navigation-item.folder.selected span {
-    color: @color__navigation--text;
-    text-decoration: underline;
+    color: @color__navigation--text--selected;
 }
 
 .extendednavigation__navigation-item.folder.selected .selected {
-    color: @color__navigation--text;
-    text-decoration: underline;
+    color: @color__navigation--text--selected;
 }
+
+
+// Dropdown Transition
+// -------------------
+.open > .navigation-list--children {
+   max-height: 200px;
+}
+  
+.navigation-list--children {
+    max-height: 0;
+    overflow: hidden;
+
+    /* Set our transitions up. */
+    -webkit-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    transition: max-height 0.8s;
+}
+
 
 // Dropdown Menu
 // -------------
@@ -94,6 +109,12 @@
         -moz-transition: all 0.2s ease;
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease;
+            display: inline-block;
+        vertical-align: middle;
+        content: "";
+        margin-left: 4px;
+        border: 5px solid transparent;
+        border-top-color: @color__navigation--text;
         @media @tablet {
             content: "";
             font-size: 0.8em;
@@ -112,7 +133,6 @@
 
 .navigation-list--children,
 .default-page .navigation-list--children {
-    background-color: lighten(@color__feature-content--background, 10%);
     border: 1px solid darken(@color-swatch1,10%);
     z-index: 99999;
     .navigation__item-name {
@@ -237,15 +257,6 @@
     .navigation-item {
         width: 100%;
     }
-}
-
-.extendednavigation li.selected > a  {
-    text-decoration: underline;
-    color: @color__navigation--text;
-}
-
-.navigation-item.folder .navigation-item--child a {
-    color: @color__h4--text;
 }
 
 
