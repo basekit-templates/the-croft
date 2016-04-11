@@ -39,6 +39,18 @@
 }
 
 
+// Burger Icon Transitions
+// -----------------------------
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    transition:         @prop @time @ease;
+}
+
+
 // --------------------------------------------------
 // Flexbox LESS mixins
 // The spec: http://www.w3.org/TR/css3-flexbox
