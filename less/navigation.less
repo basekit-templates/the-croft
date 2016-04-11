@@ -183,8 +183,8 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
-            box-shadow: 0 6px 0 @color-swatch7;
+            background: @color-swatch3;
+            box-shadow: 0 6px 0 @color-swatch3;
             .transition( all, 0.5s, ease );
         }
         &:after {
@@ -197,27 +197,26 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch7;
+            background: @color-swatch3;
             .transition( all, 0.5s, ease );
         }
     }
     .navigation-toggle:hover {
         border: 0;
             &:before {
-                background: @color-swatch7;
-                box-shadow: 0 6px 0 @color-swatch7;
+                background: @color-swatch3;
+                box-shadow: 0 6px 0 @color-swatch3;
             }
             &:after {
-                background: @color-swatch7;
+                background: @color-swatch3;
             }
     }
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color-swatch3;
             &:before {
                 margin-top: 21px;
-                background: @color-swatch7;
+                background: @color-swatch3;
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -236,7 +235,7 @@
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
-                background: @color-swatch7;
+                background: @color-swatch3;
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
@@ -256,17 +255,10 @@
     .navigation-item {
         width: 100%;
     }
+    .navigation-list {
+        background-color: #f5f5f5;
+    }
+    .navigation-list--children.extendednavigation__navigation-list {
+        background-color: #eaecee;
+    }
 }
-
-// -----------------------------
-// Burger Icon Transitions
-// -----------------------------
-
-.transition (@prop: all, @time: 0.5s, @ease: ease) {
-    -webkit-transition: @prop @time @ease;
-    -moz-transition:    @prop @time @ease;
-    -ms-transition:     @prop @time @ease;
-    -o-transition:      @prop @time @ease;
-    transition:         @prop @time @ease;
-}
-
