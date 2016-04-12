@@ -5,38 +5,38 @@
 <section class="page  page--default">
 
 
-<!-- Header -->
-<header class="template-header">
-    <div class="container">
-        <div class="flex-item">
-            <div class="widget-profile-header">
-                {{widget('profile', 'header-profile1', { 'profileType':'socialicons' })|raw}}
+    <!-- Header -->
+    <header class="template-header">
+        <div class="container">
+            <div class="flex-item">
+                <div class="widget-profile-header">
+                    {{widget('profile', 'header-profile1', { 'profileType':'phone' })|raw}}
+                </div>
             </div>
-        </div>
-        <div class="flex-item">
+            <div class="flex-item">
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                 {{widget('companyname', 'companyname', {
                 "business": "profile",
                 "showTplWidget":"0"
                 })|raw}}
-        </div>
-        <div class="flex-item">
-                    <div class="template-navigation">
-                {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+            </div>
+            <div class="flex-item">
+                {{widget('profile', 'header-profile2', { 'profileType':'socialicons' })|raw}}
             </div>
         </div>
-    </div>
-</header>
-
+    </header>
 
     <div class="page-title">
         {{widget('pagetitle', 'page-title', {})|raw}}
     </div>
 
-
     <!-- Zone Content -->
     <div class="main-content">
         <div class="container">
+
+            <div class="homepage-nav">
+                {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+            </div>
 
             {{zone('main')|raw}}
 

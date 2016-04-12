@@ -105,7 +105,7 @@ body {
         margin-top: 0;
 
         .widget:first-child {
-            margin-top: 60px;
+            margin-top: 30px;
         }
     }
 }
@@ -147,7 +147,8 @@ body {
 
 .page--default {
     .template-header {
-        background-color: @color__primary;
+        background-color: @color__header--background;
+        position: relative;
         .flex-item:first-child {
             width: 33.33%;
             @media @mobile {
@@ -284,8 +285,7 @@ body {
 // ------------------------------
 
 // For default page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
-.page--default .template-header {
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
     position: relative;
     z-index: inherit;
     width: 100%;
@@ -397,20 +397,105 @@ body {
 // #Footer
 // ------------------------------
 
+.contact-footer-title {
+    background-color: @color__secondary;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    right: auto;
+    max-width: 200px;
+    top: -68px;
+    padding: 10px;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    h2 {
+        color: white;
+    }
+}
+
+.footer-container {
+    max-width: 60%; 
+    margin: 0px auto;
+    .flex-display;
+    .flex-direction(row);
+    .justify-content(center);
+    @media @tablet {
+        max-width: 90%;
+    }
+}
+
+.contact-footer {
+    background-color: #f5f5f5;
+    padding: 40px 0px;
+    .flex-item-50 {
+        &:first-child {
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            margin-right: 30px;
+            width: 100%;
+        }
+        &:last-child {
+            -webkit-box-ordinal-group: 2;
+            -moz-box-ordinal-group: 2;
+            -webkit-order: 1;
+            -ms-flex-order: 1;
+            order: 1;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            width: 100%;
+        }
+    }
+    .contactform__legend {
+        position: relative;
+        color: @color__h2--text;
+        font-weight: @font__h2--font-weight;
+        background-color: transparent;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .contactform__form-body {
+        padding: 0;
+        width: 100%;
+    }
+}
 
 .template-footer {
     width: 100%;
-    background-color: @color__body--background;
-    border-top: 1px solid darken(@color__body--background, 10%);
+    background-color: @color__footer--background;
     text-align: center;
+
+    .social-item {
+        margin-right: 0;
+    }
 
     // Widget
     .widget {
         @media @bp-global-large {
-            padding: 40px 70px;
+            padding: 20px 70px;
         }
         @media @bp-global-medium {
-            padding: 30px 40px;
+            padding: 20px 40px;
         }
         @media @bp-global-small {
             padding: 20px 20px;

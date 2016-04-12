@@ -1,6 +1,6 @@
 
-@color__primary:black;
-@color__secondary: #f5f6f7;
+@color__primary:#171717;
+@color__secondary: #a10303;
 
 
 @color__body--background:#fff;
@@ -54,7 +54,8 @@
 @color__p--text:#747682;
 
 
-@color__header--background: #22242b;
+@color__header--background: @color__primary;
+@color__footer--background: @color__primary;
 
 @color__navigation--icon: #fff;
 @font__navigation--font-family:@font-swatch6-font-family;
@@ -67,12 +68,12 @@
 
 
 @color__form-legend--text:#fff;
-@color__form-legend--background:@color__primary;
+@color__form-legend--background:@color__secondary;
 
 
-@color__button--background: @color__secondary;
-@color__button--text:#7e8a8e;
-@color__button--background--hover:darken(@color__button--background, 4%);
+@color__button--background: @color__primary;
+@color__button--text:white;
+@color__button--background--hover:@color__secondary;
 @font__button--font-family:@font-swatch7-font-family;
 @font__button--font-size:13px;
 @font__button--font-weight:700;
@@ -107,6 +108,7 @@
 @color__slideshow-title--text: #fff;
 @color__slideshow-description--text: #bebebe;
 
+@color__twitter-account-name--background: @color__secondary;
 
 @color__menusections--background:darken(desaturate(@color__primary, 10%), 5%);
 @color__menu--background:fade(@color__p--text, 3%);
@@ -118,7 +120,7 @@
 @color__blogsearch-legend--text:@color__form-legend--text;
 @color__blogpostlist-article--background:@color__secondary;
 @color__blogpost-title--background:@color__secondary;
-@color__blogpost-title--text:@color__h1--text;
+@color__blogpost-title--text:white;
 
 
 @color__ecomproductslist-product-title--text:@color__primary;

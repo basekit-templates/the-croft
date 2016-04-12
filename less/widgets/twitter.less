@@ -11,8 +11,7 @@
 	position: relative;
     display: inline-block;
     float: left;
-    padding: 50px;
-    background-color: @color__secondary;
+    background-color: #f5f5f5;
 
     width: 31.333%;
     margin-right: 3%;
@@ -21,13 +20,11 @@
         width: 48%;
         margin-right: 2%;
         margin-bottom: 2%;
-        padding: 40px;
     }
     @media @tablet {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
-        padding: 30px;
     }
 
 
@@ -35,10 +32,6 @@
         margin-right: 0;
     }
 
-}
-
-.tweet-item {
-    position: relative;
 }
 
 
@@ -69,7 +62,7 @@
 
 
 .tweet-content {
-    padding-top: 15px;
+    padding: 20px;
     position: relative;
 
 
@@ -88,6 +81,9 @@
     }
 }
 
+.account-name {
+    margin-left: 55px;
+}
 
 
 
@@ -99,8 +95,10 @@
     font-size: 19px;
     line-height: 40px;
     min-height: 40px;
-    margin-left: 55px;
-    color: @color__h2--text;
+    color: white;
+    background-color: @color__secondary;
+    width: 100%;
+    display: inline-block;
 }
 
 .responsivecolumns .twitter__account-link {
@@ -122,6 +120,7 @@
 	color: fade(@color__p--text, 50%);
     letter-spacing: 1px;
     text-transform: uppercase;
+    padding-left: 10px;
 
     @media @bp-global-small {
         font-size: 10px;
