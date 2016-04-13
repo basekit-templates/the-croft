@@ -86,14 +86,14 @@
 
     .post-body {
         clear: both;
-        padding: 60px 0;
+        padding: 60px 0 0;
 
         @media @bp-blog-post-layout-vertical {
-            padding: 40px 0;
+            padding: 40px 0 0;
         }
 
         @media @bp-global-small {
-            padding: 20px 0;
+            padding: 20px 0 0;
         }
     }
 
@@ -107,6 +107,9 @@
     .post-header {
         background-color: @color__blogpost-title--background;
         padding: 20px 16.666%;
+        -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
 
         @media @tablet {
             padding: 10px 5%;
@@ -148,23 +151,9 @@
     .post-footer {
         position: relative;
 
-        @media @bp-blog-post-layout-vertical {
-            padding: 40px;
-        }
-
-        @media @bp-blog-post-layout-vertical {
-            padding: 0 40px 20px;
-        }
-
-        @media @bp-global-small {
-            padding: 0 20px 20px;
-        }
-
         // Timestamp
 
         .timestamp {
-            position: absolute;
-            right: 70px;
             color: fade(@color__p--text, 80%);
             display: block;
             margin-bottom: 2em;
