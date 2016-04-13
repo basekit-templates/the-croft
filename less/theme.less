@@ -73,21 +73,10 @@ body {
     position: relative;
     z-index: 50;
     background-color: @color__body--background;
-
-    @media @bp-global-large {
-        margin-top: @value__widget--spacing--desktop;
-    }
-    @media @bp-global-medium {
-        margin-top: @value__widget--spacing--laptop;
-    }
-    @media @tablet {
-        margin-top: @value__widget--spacing--tablet;
-    }
-    @media @mobile {
-        margin-top: @value__widget--spacing--mobile;
+    .widget:first-child {
+        margin: 0 0 30px 0;
     }
 }
-
 
 
 
