@@ -7,7 +7,11 @@
     </div>
     <div class="footer-container">
         <div class="flex-item-50">
-            {{widget('contactform', 'contact', {})|raw}}
+            {{widget('contactform', 'contact', {
+                'text': 'Submit',
+                'formTitle': 'Contact',
+                'email': 'profile'
+            })|raw}}
         </div>
         <div class="flex-item-50">
             {{widget('content', 'title', {
