@@ -17,35 +17,51 @@
     .legend {
         position: absolute;
         top: 0;
-        right: auto;
-        bottom: 0;
-        left: 0;
-        padding: 0 26px;
-        color: @color__blogsearch-legend--text;
-        background-color: @color__blogsearch-legend--background;
-        width: 33.33%;
+        right: 50%;
+        left: 28%;
+        color: @color__form-legend--text;
+        background-color: @color__form-legend--background;
+        width: 70px;
+        height: 60px;
         font-family: @font__h2--font-family;
         font-size: @font__h2--font-size;
-        line-height: bkscale(@font__button--font-size, 3);
-        height: bkscale(@font__button--font-size, 3);
+        line-height: @font__h2--line-height;
         text-align: right;
-
-       @media @bp-global-small {
-            position: relative;
+        text-align: center;
+        margin-top: -30px;
+        line-height: 60px;
+        -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        text-indent: -9999px;
+        &:before {
+            content:"\f002";
             width: 100%;
-            margin-bottom: 10px;
-            text-align: left;
-            height: auto;
-            line-height: 1;
-            padding: 20px;
+            height: 100%;
+            font-family: 'FontAwesome', sans-serif;
+            display: block;
+            position: absolute;
+            top: 0px;
+            font-size: 16px;
+            font-weight: bold;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            color: white;
+            text-indent: 0;
+        }
+        @media @tablet {
+            left: 6%;
+        }
+        @media @mobile {
+            left: 12%;
         }
     }
 
     // Form Body
 
     .form-body {
-        width: 66.66%;
-        margin: 0 0 0 auto;
+        width: 50%;
+        margin: 0 auto;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -69,12 +85,11 @@
         -webkit-align-content: stretch;
         -ms-flex-line-pack: stretch;
         align-content: stretch;
-        padding: 20px 40px;
+        padding: 60px 40px 40px 40px;
         background-color: #f5f5f5;
 
         @media @bp-global-small {
-            padding: 0 20px;
-            width: auto;
+            width: 100%;
         }
     }
 

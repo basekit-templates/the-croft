@@ -34,6 +34,9 @@
 
 }
 
+.tweet-wrap {
+    padding: 30px;
+}
 
 
 
@@ -42,12 +45,18 @@
 
 .twitter__avatar {
     position: absolute;
+    bottom: 50%;
+    top: 38%;
+    left: 0px;
 }
 
 .twitter__avatar-image {
-	width: 40px;
-	height: 40px;
-	display: block;
+    width: 50px;
+    height: 50px;
+    display: block;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
 }
 
 .avatar-link {
@@ -64,6 +73,8 @@
 .tweet-content {
     padding: 20px;
     position: relative;
+    padding-left: 10%;
+    padding-right: 0;
 
 
     // Link
@@ -82,7 +93,8 @@
 }
 
 .account-name {
-    margin-left: 55px;
+    margin-left: 15px;
+    color: @color-swatch4;
 }
 
 
@@ -96,7 +108,6 @@
     line-height: 40px;
     min-height: 40px;
     color: white;
-    background-color: @color__secondary;
     width: 100%;
     display: inline-block;
 }

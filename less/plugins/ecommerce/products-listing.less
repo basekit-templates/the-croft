@@ -79,7 +79,7 @@
 
 
 .ecomproductslist__fieldset--filters {
-    padding: 12px 70px 8px;
+    padding: 0px 70px 28px;
     width: 66.66%;
     // background-color: @color__ecomproductslist-filters--background;
 
@@ -433,16 +433,30 @@
     // Clickable item, class added via JS
 
     &.clickable {
-        cursor: pointer;
-        -webkit-transition: all 0.1s ease-in-out;
-        -moz-transition: all 0.1s ease-in-out;
-        -o-transition: all 0.1s ease-in-out;
-        transition: all 0.1s ease-in-out;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
         &:hover {
-            box-shadow: inset 0px 0px 0px 6px fade(@color__p--text, 16%);
+            box-shadow: 0px 0px 150px #D2D2D2;
+            background-color: white;
+            z-index: 2;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1.5);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1.5);   
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1.5);
+            transition: all 200ms ease-in;
+            transform: scale(1.1);
         }
     }
 }
+
 
 
 
