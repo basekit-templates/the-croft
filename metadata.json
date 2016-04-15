@@ -222,8 +222,8 @@
         "menu": {
             "color__menusections--background" : "@color__secondary",
             "color__menu--background" : "fade(@color__secondary, 3%)",
-            "color__menu-section-header--background" : "@color__secondary",
-            "color__menu-section-featured--background" : "@color__secondary"
+            "color__menu-section-header--background" : "#D6D6D6",
+            "color__menu-section-featured--background" : "#D6D6D6"
         },
         "blog": {
             "color__blogsearch-legend--background" : "@color__form-legend--background",

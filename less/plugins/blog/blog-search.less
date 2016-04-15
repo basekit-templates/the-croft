@@ -133,7 +133,9 @@
     }
 
     .button {
-        padding: 4px 20px; 
+        @media @tablet {
+            padding: 4px 20px; 
+        }   
     }
 }
 
@@ -160,22 +162,14 @@
     // Legend
 
     .widget__blogsearch .legend {
-        width: auto;
-        display: block;
-        float: none;
-        position: relative;
-        text-align: left;
-        padding: 0;
-        background: none;
+        left: 3%;
     }
 
     // Form Body
 
     .widget__blogsearch .form-body {
-        float: none;
-        width: auto;
-        border-left: none;
-        padding: 0;
+        width: 100%;
+        padding: 50px 10px 20px 20px;
     }
 
 

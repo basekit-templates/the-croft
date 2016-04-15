@@ -34,7 +34,9 @@
                 {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
             </div>
 
-            {{zone('main')|raw}}
+            {% include "responsivecolumns-two.twig" %}
+            {% include "responsivecolumns-three.twig" %}
+            {% include "responsivecolumns-four.twig" %}
 
         </div>
     </div>

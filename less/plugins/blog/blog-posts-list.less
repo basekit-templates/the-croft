@@ -290,7 +290,6 @@
 
 
 
-
 // All Columns
 // ------------------------------
 
@@ -305,6 +304,9 @@
 
         .post-article {
             width: 100%;
+            &:nth-child(3n+2) {
+                margin: 2% 2% 0% 2%!important;
+            }
         }
 
         // Post Content
@@ -320,11 +322,17 @@
             display: block;
         }
 
-        // Read more
+        // Read More
 
         .read-more {
             position: relative;
             margin: 0;
+        }
+
+        // Pagination List
+
+        .pagination-list {
+            margin: 20px;
         }
     }
 
@@ -347,19 +355,16 @@
 
             .post-article {
                 width: auto;
-                background-color: transparent !important;
             }
 
             // Post Content
 
             .post-content {
-                padding: 1em 0;
             }
 
             // Timestamp
 
             .post-footer .timestamp {
-                padding: 0 0 2em 0;
             }
         }
     }
