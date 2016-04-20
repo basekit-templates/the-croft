@@ -39,22 +39,6 @@
     margin: 0;
 }
 
-
-// Default Page
-.default-page .navigation-list--children {
-    background-color: @color-swatch2;
-}
-
-// Navigation Item
-// ---------------
-
-.navigation-item {
-    @media @tablet {
-        width: 100%;
-    }
-}
-
-
 // Navigation Link
 .navigation-item .item-name {
     padding: 5px 15px;
@@ -131,11 +115,9 @@
     }
 }
 
-.navigation-list--children,
-.default-page .navigation-list--children {
+.navigation-list--children {
     border: 0;
     background-color: #f5f5f5;
-    z-index: 99999;
     .navigation__item-name {
         color:@color__feature-strapline--text;
     }
@@ -178,101 +160,6 @@
 }
 
 @media @tablet {
-    .navigation-toggle {
-        display: block;
-        overflow: hidden;
-        width: 100%;
-        height: 45px;
-        text-indent: 3000px;
-        line-height: 0;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-        outline: 0;
-        border: 0;
-        background-color: @color__secondary;
-        &:before {
-            content: '';
-            position: absolute;
-            width: 26px;
-            height: 3px;
-            top: 0;
-            left: 50%;
-            right: 0;
-            margin-top: 15px;
-            margin-left: -13px;
-            background: white;
-            box-shadow: 0 6px 0 white;
-            .transition( all, 0.5s, ease );
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            width: 26px;
-            height: 3px;
-            top: 12px;
-            left: 50%;
-            right: 0;
-            margin-top: 15px;
-            margin-left: -13px;
-            background: white;
-            .transition( all, 0.5s, ease );
-        }
-    }
-    .navigation-toggle:hover {
-        border: 0;
-            &:before {
-                background: white;
-                box-shadow: 0 6px 0 white;
-            }
-            &:after {
-                background: white;
-            }
-    }
-    // Toggle Button Open State
-    .open & {
-        &.navigation-toggle {
-            &:before {
-                margin-top: 21px;
-                background: white;
-                box-shadow: none;
-                -webkit-transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -o-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-                .transition( all, 0.5s, ease );
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                width: 26px;
-                height: 3px;
-                top: 0;
-                left: 50%;
-                right: 0;
-                margin-top: 21px;
-                margin-left: -13px;
-                background: white;
-                box-shadow: none;
-                -webkit-transform: rotate(-45deg);
-                -moz-transform: rotate(-45deg);
-                -o-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-                .transition( all, 0.5s, ease );
-            }
-        }
-    }
-    .navigation-body {
-        display: none;
-        .open & {
-            display: block;
-        }
-    }
-    .navigation-item {
-        width: 100%;
-    }
     .navigation-list {
         background-color: #f5f5f5;
     }
@@ -282,85 +169,17 @@
 }
 
 .navigation-list {
-@media @tablet {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    }
-    }
-
-.navigation-item:nth-child(1) {
-@media @tablet {
-        -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-}
-    }
-
-.navigation-item:nth-child(2) {
-@media @tablet {
-        -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-}
-}
-
-.open .navigation-body {
-    display: block;
     @media @tablet {
-      overflow-y:hidden;
-  overflow-x:scroll;
+        .flex-display;
+        overflow-y:hidden;
+    overflow-x:scroll;
   -webkit-overflow-scrolling:touch;
     }
-}
+  }
 
 
 .navigation-item {
+    position: inherit;
     @media @tablet {
         padding: 20px 0;
         display: inline-block;
