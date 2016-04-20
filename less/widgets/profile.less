@@ -31,6 +31,9 @@
     .tweet-content {
        padding: 0;
     }
+    .js-twitter {
+        .clearfix;
+    }
 
 
     // Address
@@ -77,6 +80,10 @@
 // --------------
 
 .template-header {
+
+    .twitter__tweet-wrap {
+        padding: 0;
+    }
 
     .flex-item:last-child {
         .profile__signupform {
@@ -378,6 +385,9 @@
 .template-footer {
     .signupform__button {
         background-color: @color__secondary;
+        @media @mobile {
+            padding: 5px 20px!important;
+        }
     }
     .profile {
         .legend {
