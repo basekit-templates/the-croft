@@ -181,7 +181,7 @@
         },
         "form": {
             "color__form-legend--text" : "#fff",
-            "color__form-legend--background": "@color__primary"
+            "color__form-legend--background": "@color__secondary"
         },
         "button": {
             "color__button--background" : "@color__primary",

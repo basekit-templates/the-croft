@@ -2,40 +2,39 @@
 // The Croft Template: CSS > Widgets > Gallery
 // -------------------------------------------
 
+// Gallery List
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    @media @mobile {
+        margin-bottom: 30px;
+    }
+}
 
 // Gallery Item
 // ------------------------------
 
 
 .gallery__gallery-item {
-	float: left;
-	height: 0; // Height is achieved using padding-bottom
-	width: @value__gallery--width--desktop;
-	padding-bottom: @value__gallery--width--desktop;
-	overflow: hidden;
-	position: relative;
-	margin: 0;
-
-
-	// 4 Columns Layout
-	@media @bp-global-medium {
-		width: @value__gallery--width--laptop;
-		padding-bottom: @value__gallery--width--laptop;
-	}
-
-
-	// 3 Columns Layout
-	@media @tablet {
-		width: @value__gallery--width--tablet;
-		padding-bottom: @value__gallery--width--tablet;
-	}
-
-
-	// 2 Columns Layout
-	@media @mobile {
-		width: @value__gallery--width--mobile;
-		padding-bottom: @value__gallery--width--mobile;
-	}
+    height: 0;
+    width: 33.33%;
+    padding-bottom: 30%;
+    position: relative;
+    @media @mobile {
+        width: 50%;
+        padding-bottom: 40%;
+    }
 }
 
 
@@ -63,7 +62,7 @@
 	left: 0;
 	width: 100%;
 	height: 0;
-	padding-bottom: 100%;
+	padding-bottom: 90%;
 	background-size: cover;
 	background-position: center center;
 }
@@ -94,7 +93,10 @@
 		transform: translate3d(0px, -10px, 0px);
 		background-color: fade(@color__gallery-caption--background, 70%);
 		opacity: 1;
-		width: 100%;
+        width: 100%;
+        @media @mobile {
+            display: none;
+        }
 	}
 }
 
