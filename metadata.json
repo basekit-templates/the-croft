@@ -185,8 +185,8 @@
         },
         "button": {
             "color__button--background" : "@color__primary",
-            "color__button--text" : "white",
-            "color__button--background--hover": "lighten(@color__button--background, 10%)",
+            "color__button--text" : "#fff",
+            "color__button--background--hover": "@color__secondary",
             "color__button--text--hover" : "@color__button--text",
             "font__button--font-family" : "@font-swatch7-font-family",
             "font__button--font-size" : "13px",
@@ -232,7 +232,7 @@
             "color__blogsearch-legend--background" : "@color__form-legend--background",
             "color__blogsearch-legend--text" : "@color__form-legend--text",
             "color__blogpost-title--background" : "@color__secondary",
-            "color__blogpost-title--text" : "@color__h1--text"
+            "color__blogpost-title--text" : "@color__form-legend--text"
         },
         "ecommerce": {
             "color__ecomproductslist-product-title--text" : "@color__p--text",
