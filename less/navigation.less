@@ -32,9 +32,10 @@
     margin: 0;
 
     @media @tablet {
-        .flex-display;
-        overflow-x:scroll;
-        -webkit-overflow-scrolling:touch;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 }
 
@@ -135,14 +136,11 @@
         position: absolute;
         width: 100%;
         top: 100%;
+        .flex-display;
         min-height: 30px;
         box-shadow: 0 3px 4px rgba(130, 130, 130, 0.2);
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
-        white-space: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 }
 
@@ -151,13 +149,6 @@
         display: inline-block;
     }
 }
-
-.navigation-item.folder-open .navigation-list--children {
-    @media @tablet {
-        .flex-display;
-    }
-}
-
 
 .navigation-list--children {
     display: none;
