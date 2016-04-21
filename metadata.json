@@ -21,7 +21,7 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#FBE6A1",
+            "color2":"#a10303",
             "color3":"#000000",
             "color4":"#000000",
             "color5":"#424D51",
@@ -120,7 +120,7 @@
     "styles": {
         "colors": {
             "color__primary": "black",
-            "color__secondary": "#f5f6f7"
+            "color__secondary": "#a10303"
         },
         "site": {
             "color__body--background": "#000",
@@ -174,7 +174,7 @@
             "font__navigation--line-height": "26px",
             "font__navigation--letter-spacing": "1px",
             "color__navigation--text": "@color-swatch4",
-            "color__navigation--text--selected": "@color-swatch4"
+            "color__navigation--text--selected": "@color__secondary"
         },
         "form": {
             "color__form-legend--text" : "#fff",
