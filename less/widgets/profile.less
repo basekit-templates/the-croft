@@ -81,10 +81,7 @@
 
 .template-header {
 
-    .twitter__tweet-wrap {
-        padding: 0;
-    }
-
+    // Flex Item
     .flex-item:last-child {
         .profile__signupform {
             float: right;
@@ -92,14 +89,27 @@
         }
     }
 
-    // Content Widget
-    .content p {
-        color: @color__feature-headline--text;
-        font-family: @font__h4--font-family;
+    // Click To Call 
+    .widget__clicktocall .phone-number-link {
+        background-color: transparent;
         font-size: 16px;
-        font-weight: 700;
-        line-height: 22px;
-        text-transform: uppercase;
+    }
+
+    .clicktocall__phone-number {
+        @media @mobile {
+            display: none;
+        }
+    }
+
+    .icon--phone:before {
+        @media @mobile {
+            font-size: 18px;
+        }
+    }
+
+    // Twitter Wrap
+    .twitter__tweet-wrap {
+        padding: 0;
     }
 
     // Profile
@@ -230,6 +240,9 @@
                 &:last-child {
                     margin-right: 0;
                 }
+            }
+            @media @mobile {
+                margin-bottom: 0;
             }
         }
         .social-link:before {
