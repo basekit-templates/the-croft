@@ -145,7 +145,7 @@
         }
 
         // Typography
-        a, h2, h3, p {
+        a, h1, h2, h3, h4, p {
             position: relative;
             display: inline-block;
             padding-bottom: 0;
@@ -154,7 +154,7 @@
             font-weight: 400;
             line-height: 22px;
             letter-spacing: 3px;
-            color: @color__feature-headline--text;
+            color: #bebebe;
             text-transform: uppercase;
             -webkit-font-smoothing: inherit;
 
@@ -269,11 +269,14 @@
         }
 
         // Twitter
-        .avatar,
-        .account-link,
-        .tweet-metadata {
+        .twitter__avatar-image {
             display: none;
         }
+
+        .account-name {
+            color: white;
+        }     
+
         .tweet-content {
 
             a {
