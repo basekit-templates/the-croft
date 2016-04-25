@@ -19,6 +19,7 @@
 
 .widget__ecombasketsummary {
     text-align: center;
+    padding: 20px;
     .message {
         padding-left: 0;
         margin: 20px 0px;
@@ -26,6 +27,9 @@
             position: relative;
             color: black;
         }
+    }
+    @media @tablet {
+        padding: 0;
     }
 }
 
@@ -343,7 +347,7 @@
 
         .table-row {
             overflow: hidden;
-            background-color: @color__secondary;
+            background-color: #f5f5f5;
             margin-bottom: 10px;
             clear: both;
             border-bottom: none;
