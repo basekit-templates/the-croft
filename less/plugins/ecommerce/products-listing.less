@@ -341,6 +341,7 @@
         box-shadow: inset 0px -1px 0px 0px #ededef;
         .heading--4;
         font-size: 14px;
+        line-height: initial;
     }
 
 
@@ -590,6 +591,7 @@
 .product-item-title {
     font-size: @font__h3--font-size;
     line-height: @font__h3--line-height;
+    text-align: center;
 
     @media @bp-global-small {
         font-size: bkscale(@font__h3--font-size, 0.8);
@@ -602,6 +604,11 @@
     }
 }
 
+
+// Product Price
+.product-item-price {
+    text-align: center;
+}
 
 
 // Pagination
