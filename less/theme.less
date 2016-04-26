@@ -401,12 +401,15 @@ body {
 }
 
 .footer-container {
-    max-width: 60%; 
+    max-width: 70%; 
     margin: 0 auto;
     padding: 0 20px 20px 20px;
     .flex-display;
     .flex-direction(row);
     .justify-content(center);
+    @media @tablet {
+        max-width: 100%;
+    }
     @media @mobile {
         max-width: 100%;
         display: block;
