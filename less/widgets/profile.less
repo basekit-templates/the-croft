@@ -90,9 +90,21 @@
     // Click To Call 
     .widget__clicktocall .phone-number-link {
         background-color: transparent;
-        font-size: 16px;
+        font-family: "Droid Serif", Georgia, serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 3px;
         color: #bebebe;
-        padding: 0 15px;
+        text-transform: uppercase;
+        -webkit-font-smoothing: inherit;
+        padding: 10px 15px;
+    }
+
+    .clicktocall__label {
+        @media @tablet {
+            display: none;
+        }
     }
 
     .clicktocall__phone-number {
@@ -156,7 +168,7 @@
             display: inline-block;
             padding-bottom: 0;
             font-family: @font__h4--font-family;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 400;
             line-height: 22px;
             letter-spacing: 3px;
@@ -482,6 +494,9 @@
     }
     a {
         color: #747682;
+    }
+    .contactform__form-body {
+        background-color: transparent!important;
     }
 }
 

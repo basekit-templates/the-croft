@@ -387,6 +387,7 @@ body {
     text-align: center;
     position: relative;
     top: -28px;
+    z-index: 9999;
     h1, h2, h3, h4, h5, p, a, span {
         color: @color__button--text;
         background-color: @color__secondary;
@@ -403,7 +404,7 @@ body {
 .footer-container {
     max-width: 70%; 
     margin: 0 auto;
-    padding: 0 20px 20px 20px;
+    padding: 10px 20px 40px 20px;
     .flex-display;
     .flex-direction(row);
     .justify-content(center);
@@ -491,6 +492,10 @@ body {
     .contactform__form-group {
         text-align: left;
     }
+}
+
+.footer-content-1 {
+    margin-bottom: 10px;
 }
 
 .template-footer {
