@@ -38,8 +38,12 @@
     .flex-display;
     .flex-direction(column);
     .justify-content(center);
+    @media @tablet {
+        max-width: 60%;
+    }
     @media @mobile {
         top: 20%;
+        max-width: 80%;
     }
 }
 
