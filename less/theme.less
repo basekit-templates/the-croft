@@ -51,6 +51,10 @@ body {
     width: 100%;
 }
 
+.page--home {
+    margin-bottom: 60px;
+}
+
 // Site Container
 .site-container {
     width: 100%;
@@ -60,7 +64,6 @@ body {
     min-height: 100vh;
     background-color: @color__body--background;
     overflow: hidden;
-    padding-bottom: 60px;
 
     @media @bp-global-above-fullwidth {
         width: 90%;
@@ -125,6 +128,7 @@ body {
 // ------------------------------
 
 .page--default {
+    margin-bottom: 40px;
     .template-header {
         background-color: @color__footer--background;
         position: relative;
@@ -388,7 +392,7 @@ body {
     position: relative;
     top: -28px;
     z-index: 9999;
-    h1, h2, h3, h4, h5, p, a, span {
+    h1, h2, h3, h4, h5, p, a {
         color: @color__button--text;
         background-color: @color__secondary;
         right: auto;
