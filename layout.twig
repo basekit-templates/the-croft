@@ -43,6 +43,19 @@
 	<!-- jQuery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+
+	<!-- Touch Shim Script -->
+	<script>
+	    $(document).on('mq4hsChange', function (e) {
+	        console.log(e);
+	        $(document.documentElement).toggleClass('no-touch', e.trueHover);
+	    });
+	</script>
+
+	<!-- Touch Shim -->
+	<script src="{{asset('js/mq4-hover-shim.js')}}"></script>
+
+
 	<script src="{{ asset('js/navigation.js')}}"></script>
 	<script src="{{ asset('js/custom.js')}}"></script>
 
