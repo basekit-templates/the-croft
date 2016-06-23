@@ -123,7 +123,8 @@
             "color__secondary": "#a10303"
         },
         "site": {
-            "color__body--background": "#fff",
+            "color__body--background": "#e0e0e0",
+            "color__container--background": "#fff",
             "color__link--text": "black",
             "font__companyname--font-family": "@font-swatch10-font-family",
             "font__companyname--font-size": "26px",
@@ -166,7 +167,7 @@
         },
         "header": {
             "color__header--background" : "transparent"
-        },        
+        },
         "footer": {
             "color__footer--background" : "#000000"
         },
