@@ -21,6 +21,8 @@
 }
 
 
+
+
 // Hero Logo
 // ------------------------------
 
@@ -48,12 +50,16 @@
 }
 
 
+
+
 // Feature Overlay Toggle Buttons
 // ------------------------------
 
 [data-widget-type="feature"] .widget-overlay .widget__list {
     top: 100px!important;
 }
+
+
 
 
 // Background Image
@@ -74,10 +80,21 @@
         min-height: 600px;
     }
 
-    @media @tablet { 
+    @media @tablet {
         min-height: 500px;
     }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: fade(@color__feature-content--background, 40%);
+    }
 }
+
+
 
 
 // Content Wrap
@@ -88,12 +105,9 @@
     z-index: 2;
     .flex-display;
     .align-items(flex-end);
-
     height: @value__feature--height--desktop;
-    // overflow: auto;
-    background-color: fade(@color__feature-content--background, 50%);
-    overflow: hidden; 
     padding: 0;
+
     @media @bp-global-medium {
         height: 700px;
     }
