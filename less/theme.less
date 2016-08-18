@@ -393,10 +393,10 @@ body {
     top: -28px;
     z-index: 9999;
     h1, h2, h3, h4, h5, p, a {
-        color: @color__button--text;
-        background-color: @color__secondary;
+        display: inline-block;
+        color: @color__form-legend--text;
+        background-color: @color__form-legend--background;
         right: auto;
-        max-width: 200px;
         padding: 10px;
         margin: 0px auto;
         -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
@@ -524,4 +524,10 @@ body {
             padding: 20px 20px;
         }
     }
+}
+
+// Fixes overlay issue in the editor when trying to edit the content widget above the footer.
+
+.footer-container .widget-overlay {
+    z-index: 999;
 }
