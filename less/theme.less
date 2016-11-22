@@ -82,12 +82,15 @@ body {
     z-index: 50;
     background-color: @color__container--background;
     .widget:first-child {
-        margin-bottom: 0;
-    }
-    .widget:nth-child(2) {
         margin-bottom: 30px;
     }
 }
+
+
+.main-content .homepage-nav .widget:first-child {
+    margin-bottom: 0px!important;
+}
+
 
 // Default Page Main
 .page--default {
