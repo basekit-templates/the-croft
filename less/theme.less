@@ -272,12 +272,14 @@ body {
 // For home page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-logo {
     background-color: @color-swatch3;
-    position: relative;
+    position: initial;
+    min-height: 80px;
 }
 
 // For home page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero {
     height: 100%;
+    background-color: @color-swatch3;
 }
 
 // For home page and when feature is hidden
@@ -293,13 +295,6 @@ body {
 // For home page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .main-content{
     z-index: 99999;
-}
-
-// For home page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
-    .main-content {
-        z-index: 99999;
-    }
 }
 
 
