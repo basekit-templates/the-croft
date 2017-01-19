@@ -53,6 +53,7 @@ body {
 
 .page--home {
     margin-bottom: 60px;
+    position: relative;
 }
 
 // Site Container
@@ -187,10 +188,20 @@ body {
 // #Header
 // ------------------------------
 
-.template-header {
+[data-widget-type="feature"] + .template-header {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     top: 0;
     z-index: 10001;
+}
+
+
+.template-header,
+[data-widget-type="feature"].bk-tpl-hidden +.template-header {
+    background-color: @color__footer--background;
+    position: relative;
     max-width: @value__container--width;
     padding: 20px 10px 20px 20px;
     width: 100%;
@@ -215,6 +226,7 @@ body {
 		.flex-display;
 		.justify-content(space-between);
         .align-items(center);
+        height: 100%;
 
         @media @mobile {
             display: block;
@@ -224,6 +236,12 @@ body {
     // Flex Item
     .flex-item {
         width: 33.333%;
+
+        &:first-child,
+        &:last-child {
+            .align-self(flex-start);
+        }
+
         &:last-child {
             text-align: right;
         }
@@ -265,149 +283,42 @@ body {
 // ----------------------------------------
 
 
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .profile .button {
-    top: 0px;
-}
-
-// For home page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-logo {
-    background-color: @color-swatch3;
-    position: initial;
-    min-height: 80px;
-}
-
-// For home page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero {
-    height: 100%;
-    background-color: @color-swatch3;
-}
-
-// For home page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
-    background-color: @color-swatch3;
-}
-
-// For home page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .main-content{
-    z-index: 99999;
-}
-
-// For home page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .main-content{
-    z-index: 99999;
-}
-
-
-// Header: Additional
-// ------------------------------
-
-// For default page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
-    position: relative;
-    z-index: inherit;
+.page--home [data-widget-type="feature"] + .template-header + .hero-logo {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10001;
+    padding: 20px;
     width: 100%;
-    background-color: @color__container--background;
-    min-height: auto;
-    border-bottom: 1px solid darken(@color__container--background, 10%);
-
-
-    // Flex Item
+    min-height: 200px;
+    height: 50%;
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+    @media @tablet {
+        max-width: 60%;
+    }
     @media @mobile {
-        .flex-item:first-child,
-        .flex-item:last-child {
-            background-color: darken(@color__container--background, 4%);
-            border-bottom: 1px solid darken(@color__container--background, 10%);
-        }
-    }
-
-    // Profile Widget
-    .profile {
-
-        p, h2, h3,
-        .phone-number-link,
-        .company-link,
-        .social-link:before,
-        .emailaddress__email,
-        .button {
-            color: @color__companyname--text;
-        }
-
-        // Twitter
-        .tweet-content a {
-            color: white;
-        }
-
-         // Email
-        .emailaddress__email {
-            @media @tablet {
-                color: transparent;
-
-                &:before {
-                    color: @color__h2--text;
-                }
-            }
-        }
-
-        // Form
-        .input {
-            color: @color__h2--text;
-            border-color: darken(@color__container--background, 10%);
-        }
-
-        // Placeholder
-        .input::-webkit-input-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-        .input:-moz-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-        .input:-ms-input-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-        .input::-ms-input-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-
-        // Button
-        .button {
-            position: relative;
-            top: 1px;
-            margin-top: 0;
-            padding: 0 10px;
-            border-left: 0;
-            border-right: 1px solid darken(@color__container--background, 10%);
-        }
-
-    }
-
-    // Comapny Link
-    .company-link {
-        color: @color__h2--text;
-    }
-
-    // Navigation Toggle Button
-    .navigation-toggle {
-        background-color: @color__navigation--text;
-
-        &:after, &:before {
-            background: @color__navigation--text;
-        }
-    }
-    .open .navigation-toggle {
-        background-color: transparent;
-
-        &:after, &:before {
-            background: @color__navigation--text;
-        }
-    }
-    .page--default .template-header .profile .tweet-content a {
-        color: #595959;
+        top: 20%;
+        max-width: 80%;
     }
 }
+
+
+[data-widget-type="feature"] + .template-header {
+    background-color: transparent;
+}
+
+
+[data-widget-type="feature"].bk-tpl-hidden + .template-header,
+.template-header {
+    position: relative;
+}
+
+
+
 
 
 // ------------------------------
