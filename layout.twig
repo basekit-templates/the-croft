@@ -35,7 +35,7 @@
 
 
 	<!-- Touch Shim Script -->
-	<script>
+	<script nonce="{{ numberUsedOnce }}">
 	    $(document).on('mq4hsChange', function (e) {
 	        console.log(e);
 	        $(document.documentElement).toggleClass('no-touch', e.trueHover);
