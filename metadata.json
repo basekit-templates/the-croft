@@ -123,7 +123,6 @@
             "color__secondary": "#a10303"
         },
         "site": {
-            "color__body--background": "#e0e0e0",
             "color__container--background": "#fff",
             "color__link--text": "black",
             "font__companyname--font-family": "@font-swatch10-font-family",
