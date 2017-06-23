@@ -180,6 +180,7 @@
             "color__navigation--text--selected": "@color__secondary"
         },
         "form": {
+            "color__form--background": "#f5f5f5",
             "color__form-legend--text" : "#fff",
             "color__form-legend--background": "@color__secondary"
         },
@@ -203,6 +204,9 @@
             "color__slideshow-caption--background": "#26292f",
             "color__slideshow-title--text" : "#fff",
             "color__slideshow-description--text" : "#bebebe"
+        },
+        "twitter": {
+            "color__twitter--background": "#f5f5f5"
         },
         "feature": {
             "color__feature-content--background": "#000000",
