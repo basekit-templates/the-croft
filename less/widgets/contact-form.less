@@ -9,7 +9,8 @@
 // ------------------------------
 
 
-.contactform__fieldset {
+.contactform__fieldset,
+.advancedcontactform__fieldset {
 	position: relative;
     margin-top: 50px;
 }
@@ -21,7 +22,8 @@
 // ------------------------------
 
 
-.contactform__form-group {
+.contactform__form-group,
+.advancedcontactform__form-group {
 	margin-bottom: 26px;
     text-align: right;
 
@@ -43,7 +45,8 @@
 // ------------------------------
 
 
-.contactform__form-body {
+.contactform__form-body,
+.advancedcontactform__form-body {
 	width: 50%;
 	margin: 0 auto;
 	background-color: @color__form--background;
@@ -62,7 +65,8 @@
 // ------------------------------
 
 
-.contactform__legend {
+.contactform__legend,
+.advancedcontactform__legend {
 	position: absolute;
 	top: 0;
     right: 50%;
@@ -118,7 +122,8 @@
 
 
 
-.contactform__label {
+.contactform__label,
+.advancedcontactform__label {
     display: none;
 }
 
@@ -136,7 +141,9 @@
 
 
 .contactform__input,
-.contactform__textarea {
+.contactform__textarea,
+.advancedcontactform__input,
+.advancedcontactform__textarea {
     background-color: white;
     border-bottom: 0;
     padding: 10px;
@@ -154,7 +161,8 @@
 // Button
 // ---------------------
 
-.contactform__button {
+.contactform__button,
+.advancedcontactform__button {
     text-align: center;
 }
 
@@ -170,12 +178,14 @@
 .responsivecolumns {
 
 	// Legend
-	.contactform__legend {
+	.contactform__legend,
+    .advancedcontactform__legend {
         left: 20px;
 	}
 
 	// Form Body
-	.contactform__form-body {
+	.contactform__form-body,
+    .advancedcontactform__form-body {
 		float: none;
 		width: auto;
 		padding: 0;
@@ -183,7 +193,8 @@
         padding: 50px 20px 20px 20px;
 	}
 
-	.contactform__form-group {
+	.contactform__form-group,
+    .advancedcontactform__form-group {
 		margin-bottom: 16px;
 	}
 
