@@ -369,8 +369,20 @@ body {
 }
 
 .contact-footer {
-    background-color: #F1EFEF;
+    background-color: darken(@color__container--background, 5%);
     padding: 0;
+    max-width: 1800px;
+    margin: 0 auto;
+
+    @media @bp-global-above-fullwidth {
+        width: 90%;
+        max-width: @value__container--width;
+        margin: 0 auto;
+    }
+    @media @mobile {
+        display: block;
+    }
+
     .flex-item-50 {
         &:first-child {
             -webkit-box-ordinal-group: 1;
@@ -450,9 +462,21 @@ body {
 }
 
 .template-footer {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
     width: 100%;
     background-color: @color__footer--background;
     text-align: center;
+
+    @media @bp-global-above-fullwidth {
+        width: 90%;
+        max-width: @value__container--width;
+        margin: 0 auto;
+    }
+    @media @mobile {
+        display: block;
+    }
 
     .social-item {
         margin-right: 0;
