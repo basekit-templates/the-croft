@@ -47,6 +47,10 @@ body {
     background-color: #e0e0e0;
     padding: 0 35px;
 
+    @media @bp-global-medium {
+        padding: 0;
+    }
+
 
     &.edit {
         @media only screen and (max-width: 1279px) {
@@ -196,12 +200,17 @@ body {
 // ------------------------------
 
 [data-widget-type="feature"] + .template-header {
+    height: ~"calc(100% - 64px)";
+    padding: 10px 20px 0 20px;
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     top: 0;
     z-index: 2;
+
+    .container {
+        height: 100%;
+    }
 }
 
 
@@ -249,6 +258,19 @@ body {
             .align-self(flex-start);
         }
 
+        &:nth-child(2) {
+            .align-self(center);
+            padding-top: 64px;
+
+            @media @bp-global-small {
+                padding-top: 32px;
+            }
+
+            @media @mobile {
+                padding-top: 45px;
+            }
+        }
+
         &:last-child {
             text-align: right;
         }
@@ -277,9 +299,13 @@ body {
             }
             &:last-child {
                 position: absolute;
-                top: 21px;
-                right: 5px;
+                top: 20px;
+                right: 8px;
                 width: 50%;
+
+                @media @mobile {
+                    top: 15px;
+                }
             }
         }
     }
