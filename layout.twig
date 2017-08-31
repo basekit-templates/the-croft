@@ -16,7 +16,7 @@
 	{% include basekit.headScript %}
 </head>
 
-<body class="{{ page.backgroundClass }}">
+<body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
 
 	<!-- Site Container (Required) -->
 	<div class="site-container">
@@ -31,7 +31,7 @@
     {% include basekit.bodyScript %}
 
 	<!-- jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
 	<!-- Touch Shim Script -->
@@ -44,7 +44,6 @@
 
 	<!-- Touch Shim -->
 	<script src="{{asset('js/mq4-hover-shim.js')}}"></script>
-
 
 	<script src="{{ asset('js/navigation.js')}}"></script>
 	<script src="{{ asset('js/custom.js')}}"></script>
