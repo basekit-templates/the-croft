@@ -47,6 +47,10 @@ body {
     background-color: #e0e0e0;
     padding: 0 35px;
 
+    @media @bp-global-medium {
+        padding: 0;
+    }
+
 
     &.edit {
         @media only screen and (max-width: 1279px) {
@@ -64,8 +68,11 @@ body {
 }
 
 .page--home {
-    margin-bottom: 60px;
     position: relative;
+
+    .main-content {
+        padding-bottom: 60px;
+    }
 }
 
 // Site Container
@@ -196,12 +203,17 @@ body {
 // ------------------------------
 
 [data-widget-type="feature"] + .template-header {
+    height: ~"calc(100% - 64px)";
+    padding: 15px 20px 0 20px;
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 10001;
+
+    .container {
+        height: 100%;
+    }
 }
 
 
@@ -249,6 +261,19 @@ body {
             .align-self(flex-start);
         }
 
+        &:nth-child(2) {
+            .align-self(center);
+            padding-top: 64px;
+
+            @media @bp-global-small {
+                padding-top: 32px;
+            }
+
+            @media @mobile {
+                padding-top: 45px;
+            }
+        }
+
         &:last-child {
             text-align: right;
         }
@@ -277,9 +302,13 @@ body {
             }
             &:last-child {
                 position: absolute;
-                top: 21px;
-                right: 5px;
+                top: 20px;
+                right: 8px;
                 width: 50%;
+
+                @media @mobile {
+                    top: 15px;
+                }
             }
         }
     }
@@ -359,6 +388,11 @@ body {
     .flex-display;
     .flex-direction(row);
     .justify-content(center);
+
+    @media @bp-global-medium {
+        max-width: 90%;
+    }
+
     @media @tablet {
         max-width: 100%;
     }
@@ -375,7 +409,6 @@ body {
     margin: 0 auto;
 
     @media @bp-global-above-fullwidth {
-        width: 90%;
         max-width: @value__container--width;
         margin: 0 auto;
     }
@@ -461,8 +494,20 @@ body {
     margin-bottom: 10px;
 }
 
+.bk--home {
+
+    .template-footer,
+    .contact-footer {
+        width: 90%;
+
+        @media @bp-global-fullwidth {
+            width: 100%;
+        }
+    }
+}
+
 .template-footer {
-    width: 90%;
+    width: 100%;
     max-width: 1800px;
     margin: 0 auto;
     width: 100%;
@@ -470,7 +515,6 @@ body {
     text-align: center;
 
     @media @bp-global-above-fullwidth {
-        width: 90%;
         max-width: @value__container--width;
         margin: 0 auto;
     }

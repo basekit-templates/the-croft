@@ -6,7 +6,7 @@
 // --------------
 
 .homepage-nav {
-    padding: 20px;
+    padding: 10px 20px;
     border-bottom: 1px solid #eeeeee;
     margin-bottom: 60px;
     @media @tablet {
@@ -73,7 +73,12 @@
 // -----------------------------
 
 .navigation-item .item-name {
+    font-size: @font__navigation--font-size;
     padding: 12px 20px;
+
+    @media @mobile {
+        font-size: bkscale(@font__navigation--font-size, 0.8);
+    }
 
     &:hover {
         color: @color__navigation--text--selected;
