@@ -187,14 +187,6 @@
 .imagewidget__figure {
     display: inline-block;
     margin: 0;
-    text-align: center;
-}
-
-
-// Image Alignment
-.imagewidget__caption,
-.imagewidget {
-    text-align: center;
 }
 
 
@@ -214,6 +206,10 @@
     }
 }
 
+
+.widget-align-left .caption {
+    text-align: left;
+}
 
 .widget-align-center .caption {
     right: 0;
@@ -239,9 +235,7 @@
 // ------------------------------
 
 .responsiveslideshow__image-title,
-.responsiveslideshow__image-description,
-.imagewidget__image-title,
-.imagewidget__image-description {
+.responsiveslideshow__image-description {
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
@@ -301,6 +295,7 @@
 .imagewidget__image-description,
 .imagewidget__image-title {
     margin-bottom: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 
