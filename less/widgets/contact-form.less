@@ -25,7 +25,6 @@
 .contactform__form-group,
 .advancedcontactform__form-group {
 	margin-bottom: 26px;
-    text-align: right;
 
 	@media @bp-global-small {
 		margin-bottom: 16px;
@@ -35,7 +34,6 @@
 	&:last-of-type {
 		margin-bottom: 0;
 	}
-
 }
 
 
@@ -120,15 +118,8 @@
 // ------------------------------
 
 
-
-
-.contactform__label,
-.advancedcontactform__label {
-    display: none;
-}
-
 .label--message {
-	 @media @mobile {
+    @media @mobile {
         font-size: bkscale(@font__p--font-size, 0.9);
     }
 }
@@ -163,7 +154,14 @@
 
 .contactform__button,
 .advancedcontactform__button {
+    display: block;
+    margin-left: auto;
     text-align: center;
+	
+    @media @mobile {
+	    margin-left: 0;
+	    width: 100%;
+    }
 }
 
 
