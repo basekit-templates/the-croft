@@ -4,6 +4,7 @@
     "thumbnail":"the-croft.png",
     "templateType":"standard",
     "pageTypes": [ "home", "default" ],
+    "versionTenCompatible": 1,
     "screenshot":"the-croft-screenshot.jpg",
      "images":[
         "images/image-1.jpg",

@@ -38,7 +38,8 @@
 // #Full Width Widgets
 // -----------------------------
 
-.main-content {
+.main-content #page-zones__main > {
+    .widget[data-name="row"],
     .widget[data-name="responsiveslideshow"],
     .widget[data-widget-type="responsiveslideshow"],
     .widget[data-name="youtube"],
@@ -62,6 +63,24 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+
+    // Sections
+    .widget[data-name="row"] {
+        margin: 0;
+
+        + .widget {
+            margin-top: 50px;
+        }
+
+        + .widget[data-name="responsiveslideshow"],
+        + .widget[data-name="youtube"],
+        + .widget[data-name="map"],
+        + .widget[data-name="gallery"],
+        + .widget[data-name="image"] {
+            margin-top: 0;
         }
     }
 
