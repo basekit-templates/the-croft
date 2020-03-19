@@ -16,7 +16,7 @@
 	{% include basekit.headScript %}
 </head>
 
-<body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
+<body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
 
 	<!-- Site Container (Required) -->
 	<div class="site-container">
@@ -37,7 +37,6 @@
 	<!-- Touch Shim Script -->
 	<script nonce="{{ numberUsedOnce }}">
 	    $(document).on('mq4hsChange', function (e) {
-	        console.log(e);
 	        $(document.documentElement).toggleClass('no-touch', e.trueHover);
 	    });
 	</script>
