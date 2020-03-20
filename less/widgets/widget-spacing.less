@@ -13,7 +13,7 @@
     margin: 0;
 }
 
-.main-content .widget {
+.main-content #page-zones__main > .widget:not([data-name="row"]) {
     margin: 0 @value__widget--spacing--desktop @value__widget--spacing--desktop;
 
     @media @bp-global-medium {
@@ -57,7 +57,7 @@
     .widget[data-name="menusections"],
     .widget[data-name="menu"],
     .widget[data-name="image"] {
-        margin-top: 0!important; // Ensures correct spacing for default pages
+        margin-top: 0; // Ensures correct spacing for default pages
         margin-left: 0;
         margin-right: 0;
 
