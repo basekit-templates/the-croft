@@ -15,7 +15,6 @@
 
 
 .gallery__gallery-item {
-    height: 0;
     width: 33.333%;
     padding-bottom: 20%;
     position: relative;
@@ -45,9 +44,8 @@
 // ------------------------------
 
 
-.gallery__image-link {
+[data-name="gallery"] .gallery__image-link {
 	display: block;
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -64,9 +62,7 @@
 	display: none; // Using background image instead
 }
 
-
 // Captions fade in/out
-
 .caption-link {
 	padding: 20px 50px;
 	position: absolute;
@@ -81,16 +77,16 @@
     @media @mobile {
         padding: 20px;
     }
+}
 
-	&:hover {
-		transform: translate3d(0px, -10px, 0px);
-		background-color: fade(@color__gallery-caption--background, 70%);
-		opacity: 1;
-        width: 100%;
-        @media @mobile {
-            display: none;
-        }
-	}
+.gallery-item:hover .caption-link:hover {
+    transform: translate3d(0px, -10px, 0px);
+    background-color: fade(@color__gallery-caption--background, 70%);
+    opacity: 1;
+    width: 100%;
+    @media @mobile {
+        display: none;
+    }
 }
 
 // Image Title

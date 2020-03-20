@@ -11,14 +11,52 @@
     // -----------------------------
 
 
+    &.is-move-mode .hero,
+    &.is-move-mode .contact-footer {
+        display: none;
+    }
+
+
+    .homepage-nav {
+        margin-bottom: 0;
+    }
+
+
+    .page--home .main-content,
+    .page--default {
+        margin-bottom: 0;
+    }
+
+
+    [data-name="row"] legend {
+        left: initial;
+        right: initial;
+    }
+
+
+    [data-name="row"] .social-link:before,
+    [data-name="row"] .social-link:hover:before {
+        background: transparent;
+    }
+
 
 
     // Migration styles
     // -----------------------------
 
 
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 60px;
+    }
+
+
     #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
     #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child) {
         margin-top: 20px;
+    }
+
+
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 60px;
     }
 }
