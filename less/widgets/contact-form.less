@@ -44,19 +44,28 @@
 
 
 .contactform__form-body,
-.advancedcontactform__form-body {
-	width: 50%;
-	margin: 0 auto;
-	background-color: @color__form--background;
-	padding: 60px 40px 40px 40px;
+.advancedcontactform__form-body,
+.signupform__form-group--terms {
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 50%;
 
     @media @bp-global-small {
-        padding: 60px 40px 30px 40px;
         width: 100%;
     }
 }
 
 
+.contactform__form-body,
+.advancedcontactform__form-body {
+    background-color: @color__form--background;
+    padding: 60px 40px 40px 40px;
+
+    @media @bp-global-small {
+        padding: 60px 40px 30px 40px;
+    }
+}
 
 
 // Legend
