@@ -20,6 +20,7 @@
     position: relative;
     float: left;
     overflow: hidden;
+    height: 0;
     @media @mobile {
         width: 50%;
         padding-bottom: 40%;
@@ -79,7 +80,7 @@
     }
 }
 
-.gallery-item:hover .caption-link:hover {
+.gallery-item:hover .caption-link {
     transform: translate3d(0px, -10px, 0px);
     background-color: fade(@color__gallery-caption--background, 70%);
     opacity: 1;
